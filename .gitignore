@@ -1,0 +1,39 @@
+# ─── Environment ──────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.production
+
+# ─── Uploads (user-generated content) ─────────────────────────────────────────
+uploads/cv/*.pdf
+uploads/logos/*
+uploads/avatars/*
+# Keep .htaccess files
+!uploads/**/.htaccess
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+logs/*.log
+
+# ─── PHP / Composer ───────────────────────────────────────────────────────────
+vendor/
+composer.lock
+
+# ─── PHPUnit ──────────────────────────────────────────────────────────────────
+coverage/
+.phpunit.cache/
+.phpunit.result.cache
+
+# ─── OS & editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ─── XAMPP / local server ─────────────────────────────────────────────────────
+.snapshots/
+
+# ─── Database backups ─────────────────────────────────────────────────────────
+backups/
+*.sql.gz

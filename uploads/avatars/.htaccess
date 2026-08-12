@@ -1,0 +1,5 @@
+# Block PHP execution in avatars upload directory
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

@@ -1,0 +1,19 @@
+# Protect CV uploads directory
+# Only allow access to PDF files and deny direct access to PHP files
+
+<Files "*.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Only allow PDF files to be accessed
+<FilesMatch "\.(pdf)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Deny access to all other file types
+<FilesMatch "\.(?!pdf$)[^.]+$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
